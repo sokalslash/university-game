@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div id="canvas" width="980" height="630">
+      <div class="student">
+        <img class="student__img" />
+      </div>
+      <div class="control-panel">
+        <div class="friends">
+          <button
+            class="button friends__btn friends__btn--left"
+            type="button"
+          ></button>
+          <div class="friends__inner">
+            <div class="friends__card friends__card--not-photo">
+              <button class="button friends__plus-btn"></button>
+            </div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+            <div class="friends__card"></div>
+          </div>
+          <button
+            class="button friends__btn friends__btn--right"
+            type="button"
+          ></button>
+        </div>
+        <div class="nav-panel">
+          <button
+            class="button nav-panel__btn nav-panel__btn--chat"
+            type="button"
+          ></button>
+          <button
+            class="button nav-panel__btn nav-panel__btn--university"
+            type="button"
+          ></button>
+          <button
+            class="button nav-panel__btn nav-panel__btn--email"
+            type="button"
+          ></button>
+          <button
+            class="button nav-panel__btn nav-panel__btn--rating"
+            type="button"
+          ></button>
+        </div>
+      </div>
+
+      <div class="modal">
+        <div class="modal__content">
+          <p class="modal__title">Рейтинг игроков</p>
+          <button class="button modal__close-btn" type="button"></button>
+
+          <div class="modal__inner">
+            <p class="modal__list-title list-title">
+              <span class="list-title__place">Место</span>
+              <span class="list-title__name">Имя Фамилия</span>
+              <span class="list-title__experience">Опыт</span>
+            </p>
+            <ol class="rating-list"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <template id="rating-item">
+      <li class="rating-list__item rating-item">
+        <span class="rating-item__place">1</span>
+        <span class="rating-item__name">Ваш друг</span>
+        <span class="rating-item__experience">1000</span>
+      </li>
+    </template>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

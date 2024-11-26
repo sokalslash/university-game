@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  box-sizing: border-box;
+}
+
+#canvas {
+  position: relative;
+  width: 980px;
+  height: 630px;
+  margin: auto;
+  background-image: url("./assets/map.jpg");
+  background-repeat: no-repeat;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.student {
+  position: absolute;
+  top: 430px;
+  left: 423px;
+  width: 45px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/student.png");
+  transition: transform 0.5s ease-out;
+}
+
+.control-panel {
+  position: absolute;
+  top: 545px;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.friends {
+  display: flex;
+  width: 541px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/friend-block-bg.png");
+}
+
+.friends__btn {
+  width: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.friends__btn--left {
+  margin-left: 7px;
+  background-image: url("./assets/btn-slider-left.png");
+}
+
+.friends__btn--right {
+  margin-right: 7px;
+  background-image: url("./assets/btn-slider-right.png");
+}
+
+.friends__inner {
+  display: flex;
+  width: 470px;
+  gap: 11px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.friends__card {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/friend-card-bg.png");
+}
+
+.friends__card--not-photo {
+  background-image: url("./assets/friend-icon.png"),
+    url("./assets/friend-card-bg.png");
+}
+
+.friends__plus-btn {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 23px;
+  height: 23px;
+  padding: 0px;
+  background-repeat: no-repeat;
+  background-position: -11px -5px;
+  background-image: url("./assets/friend-btn-plus.png");
+}
+
+.nav-panel {
+  display: flex;
+  gap: 7px;
+}
+
+.nav-panel__btn {
+  width: 66px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-panel__btn--chat {
+  background-image: url("./assets/chat-btn.png");
+}
+
+.nav-panel__btn--chat:hover {
+  background-image: url("./assets/chat-btn-light.png");
+}
+
+.nav-panel__btn--university {
+  width: 205px;
+  background-image: url("./assets/to-university-btn.png");
+}
+
+.nav-panel__btn--email {
+  background-image: url("./assets/email-btn.png");
+}
+
+.nav-panel__btn--rating {
+  background-image: url("./assets/rating-btn.png");
+}
+
+.modal {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal__content {
+  position: relative;
+  width: 525px;
+  height: 467px;
+  font-weight: 600;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/modal-bg.png");
+  transform: translateY(-200%);
+  transition: transform 0.5s linear;
+}
+
+.modal__content--open {
+  transform: translateY(0);
+}
+
+.modal__title {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  padding: 5px 35px;
+  margin: 0;
+  line-height: 120%;
+  font-style: normal;
+  font-size: 24px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/modal-heading-bg.png");
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/modal-close-btn.png");
+}
+
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  width: 465px;
+  height: 328px;
+  margin: 90px 30px 36px 30px;
+  line-height: 120%;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/modal-inner-bg.png");
+}
+
+.modal__list-title {
+  margin: 34px 28px 8px 28px;
+}
+
+.list-title {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/modal-list-title-bg.png");
+}
+
+.rating-list {
+  width: 403px;
+  height: 225px;
+  padding: 0;
+  margin: 0 28px 0 28px;
+  font-size: 16px;
+  overflow: auto;
+  scrollbar-width: none;
+  list-style-type: none;
+}
+
+.rating-list::-webkit-scrollbar {
+  display: none;
+}
+
+.rating-list__item {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./assets/modal-item-bg.png");
+}
+
+.list-title__place,
+.rating-item__place {
+  width: 70px;
+  padding-left: 8px;
+  text-align: center;
+}
+
+.list-title__name,
+.rating-item__name {
+  width: 255px;
+  padding-left: 40px;
+}
+
+.list-title__experience,
+.rating-item__experience {
+  width: 76px;
+}
